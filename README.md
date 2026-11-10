@@ -104,6 +104,6 @@ npm test
 
 - `src/index.js`: the Worker (auth, routes).
 - `lib/`: Access JWT check, pipeline rules, HTTP helpers.
-- `public/index.html`: the board.
+- `public/index.html`: the board. `public/fonts/`: Archivo, self-hosted (SIL Open Font License).
 - `migrations/`: D1 schema and stage seed.
 - `test/`: rules, JWT validation, and the API end to end against the real schema.
