@@ -1,0 +1,13 @@
+{
+  "name": "rasco-holdings",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\"",
+    "dev": "wrangler dev",
+    "deploy": "wrangler d1 migrations apply rasco-holdings --remote && wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply rasco-holdings --remote",
+    "db:migrate:local": "wrangler d1 migrations apply rasco-holdings --local"
+  },
+  "devDependencies": { "wrangler": "^4" }
+}

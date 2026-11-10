@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rasco-holdings",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  // Every request, the page included, goes through the Worker so nothing is served without a valid Access login.
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": true },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "rasco-holdings", "database_id": "46f8ed5d-92ef-4dc8-bbaf-68107b27abef", "migrations_dir": "migrations" }
+  ],
+  "vars": {
+    // Cloudflare Access: team domain (e.g. "yourteam.cloudflareaccess.com") and this application's AUD tag.
+    // While either is empty the Worker answers 500 to everything (fails closed).
+    "ACCESS_TEAM_DOMAIN": "",
+    "ACCESS_AUD": "",
+    // Humans allowed in, comma separated. Only jay@ras.codes can approve regardless of this list.
+    "ALLOWED_EMAILS": "jay@ras.codes",
+    // Agents: Access service-token client id -> agent name, e.g. {"abc123.access":"Scout"}. Not secret.
+    "BOT_CLIENTS": "{}"
+  }
+}
