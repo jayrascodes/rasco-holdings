@@ -13,8 +13,8 @@
   "vars": {
     // Cloudflare Access: team domain (e.g. "yourteam.cloudflareaccess.com") and this application's AUD tag.
     // While either is empty the Worker answers 500 to everything (fails closed).
-    "ACCESS_TEAM_DOMAIN": "",
-    "ACCESS_AUD": "",
+    "ACCESS_TEAM_DOMAIN": "icy-wildflower-fe9c.cloudflareaccess.com",
+    "ACCESS_AUD": "bf70e8c0c47c1efd8457b1f15a56074642a0077dd2f8f8e49e272809d7a9ff77",
     // Humans allowed in, comma separated. Only jay@ras.codes can approve regardless of this list.
     "ALLOWED_EMAILS": "jay@ras.codes",
     // Agents: Access service-token client id -> agent name, e.g. {"abc123.access":"Scout"}. Not secret.
